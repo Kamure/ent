@@ -1,45 +1,56 @@
-Clinic appointment system structure
+# Clinic appointment system structure
 
+The Clinic Appointment System is a web-based application designed to manage appointments and patient records.
+It allows patients to register, log in, book, view, reschedule and cancel appointments online, while doctors can manage their schedules and patient records. 
+The system also provides administrative features for managing doctors, patients, and generating useful reports.
 
-
-clinic-appointment-system/
-
- │ ├── db.php # Database connection (MariaDB)
-
- │ ├── index.php # Landing page (redirect to login/register)
- 
- │ ├── auth/ # Authentication module
-  
- │ ├── register.php # Registration form 
-
+# Database connection (MariaDB)
+ │ ├── db.php 
+ # Landing page (redirect to login/register)
+ │ ├── index.php 
+# Authentication module
+ │ ├── auth/ 
+# Registration form   
+ │ ├── register.php 
  │ ├── register_process.php 
-
- │ ├── verify.php # OTP verification form 
-
+# OTP verification form 
+ │ ├── verify.php 
  │ ├── verify_process.php 
-
- │ ├── login.php # Login form 
-
+# Login form 
+ │ ├── login.php 
  │ ├── login_process.php 
-
  │ ├── logout.php 
-
- │ ├── appointments/ # Appointment features 
-
- │ ├── book.php # Book appointment 
-
- │ ├── view.php # View appointments 
-
- │ ├── cancel.php # Cancel appointments 
-
- │ ├── patients/ # CRUD for patients 
-
- │ ├── add.php │ ├── edit.php │ ├── delete.php │ ├── list.php 
-
- │ ├── doctors/ # CRUD for doctors 
-
- │ ├── add.php │ ├── edit.php │ ├── delete.php │ ├── list.php │ ├── reports/ # For later sprints (analytics & exports) │ ├── generate_pdf.php │ ├── generate_excel.php 
-
- │ ├── assets/ # Static files │ ├── css/ │ │ └── style.css │ ├── js/ │ │ └── script.js 
-
- │ └── README.md # Documentation
+# Appointment features 
+ │ ├── appointments/ 
+# Book appointment 
+ │ ├── book.php 
+# View appointments 
+ │ ├── view.php 
+# Reschedule appointments 
+ │ ├── reschedule.php 
+ # Cancel appointments 
+ │ ├── cancel.php 
+ # CRUD for patients 
+ │ ├── patients/ 
+ │ ├── add.php 
+ │ ├── edit.php 
+ │ ├── delete.php 
+ │ ├── list.php 
+ # CRUD for doctors 
+ │ ├── doctors/ 
+ │ ├── add.php 
+ │ ├── edit.php 
+ │ ├── delete.php 
+ │ ├── list.php 
+ │ ├── reports/ 
+ # For later sprints (analytics & exports) 
+ │ ├── generate_pdf.php 
+ │ ├── generate_excel.php 
+# Static files 
+ │ ├── assets/ 
+ │ ├── css/ │ 
+ │ └── style.css 
+ │ ├── js/ │ 
+ │ └── script.js 
+# Documentation
+ │ └── README.md 
