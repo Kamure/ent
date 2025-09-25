@@ -4,6 +4,11 @@ The Clinic Appointment System is a web-based application designed to manage appo
 It allows patients to register, log in, book, view, reschedule and cancel appointments online, while doctors can manage their schedules and patient records. 
 The system also provides administrative features for managing doctors, patients, and generating useful reports.
 
+### Dependency Management
+ | ├── composer.json  
+ │ ├── composer.lock 
+ │ ├── vendor/
+ 
 ### Database connection (MariaDB)
  │ ├── db.php 
 ### Landing page (redirect to login/register)
