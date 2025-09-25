@@ -43,10 +43,10 @@ The system also provides administrative features for managing doctors, patients,
  │ ├── list.php 
 ### CRUD for doctors 
  │ ├── doctors/ 
- │ ├── add.php 
- │ ├── edit.php 
- │ ├── delete.php 
- │ ├── list.php 
+ │ ├── doc_add.php 
+ │ ├── doc_edit.php 
+ │ ├── doc_delete.php 
+ │ ├── doc_list.php 
  │ ├── reports/ 
 ### For later sprints (analytics & exports) 
  │ ├── generate_pdf.php 
