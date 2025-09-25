@@ -27,6 +27,12 @@ The system also provides administrative features for managing doctors, patients,
  │ ├── logout.php 
 ### Appointment features 
  │ ├── appointments/ 
+
+ ### Payment Module
+│ ├─ initiate.php 
+ │ ├── confirm.php 
+ │ ├── history.php 
+ 
 ### Book appointment 
  │ ├── book.php 
 ### View appointments 
