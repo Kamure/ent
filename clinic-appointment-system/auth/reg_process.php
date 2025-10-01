@@ -13,7 +13,7 @@ $email = $_POST['email'];
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     
 
-// Check if email already exists
+
 $check = $conn->prepare("SELECT user_id FROM users WHERE email = ?");
 $check->bind_param("s", $email);
 $check->execute();
@@ -23,13 +23,13 @@ if ($check->num_rows > 0) {
     echo "❌ This email is already registered. Please use a different one or log in.";
     exit;
 }
-// Insert user into database
+
 $stmt = $conn->prepare("INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)");
 $stmt->bind_param("sss", $username, $email, $password);
 $stmt->execute();
 $user_id = $stmt->insert_id;
 
-// Generate OTP
+
 $otp = rand(100000, 999999);
 $expires = date("Y-m-d H:i:s", strtotime("+10 minutes"));
 
@@ -37,17 +37,17 @@ $stmt = $conn->prepare("INSERT INTO email_verification (user_id, otp_code, expir
 $stmt->bind_param("iss", $user_id, $otp, $expires);
 $stmt->execute();
 
-// Send OTP via email
+
 $mail = new PHPMailer(true);
 
 try {
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com'; // ✅ Replace with actual SMTP host if different
+    $mail->Host = 'smtp.gmail.com'; 
     $mail->SMTPAuth = true;
-    $mail->Username = 'kamurebeyonce@gmail.com'; // ✅ Your email
-    $mail->Password = 'masc xeub pudt cuhc';           // ✅ Your email password or app password
-    $mail->SMTPSecure = 'tls';                         // Or 'ssl' if required
-    $mail->Port = 587;                                 // Or 465 for SSL
+    $mail->Username = 'kamurebeyonce@gmail.com';
+    $mail->Password = 'masc xeub pudt cuhc';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port = 587;
 
     $mail->setFrom('kamurebeyonce@gmail.com', 'Clinic System');
     $mail->addAddress($email);
