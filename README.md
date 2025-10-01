@@ -1,4 +1,4 @@
-# Clinic appointment system structure
+# CLINIC APPOINTMENT SYSTEM STRUCTURE
 
 The Clinic Appointment System is a web-based application designed to manage appointments and patient records.
 It allows patients to register, log in, book, view, reschedule and cancel appointments online, while doctors can manage their schedules and patient records. 
@@ -26,35 +26,30 @@ The system also provides administrative features for managing doctors, patients,
  │ ├── login_process.php 
  │ ├── logout.php 
 ### Appointment features 
- │ ├── appointments/ 
-
- ### Payment Module
-│ ├─ initiate.php 
- │ ├── confirm.php 
- │ ├── history.php 
- 
-### Book appointment 
+ │ ├── appointments/   
  │ ├── book.php 
-### View appointments 
  │ ├── view.php 
-### Reschedule appointments 
  │ ├── reschedule.php 
-### Cancel appointments 
  │ ├── cancel.php 
 ### CRUD for patients 
  │ ├── patients/ 
  │ ├── add.php 
  │ ├── edit.php 
  │ ├── delete.php 
- │ ├── list.php 
+ │ ├── list.php  
 ### CRUD for doctors 
  │ ├── doctors/ 
- │ ├── add.php 
- │ ├── edit.php 
- │ ├── delete.php 
- │ ├── list.php 
+ │ ├── doc_add.php 
+ │ ├── doc_edit.php 
+ │ ├── doc_delete.php 
+ │ ├── doc_list.php 
+ ### Payment Module
+ │ ├── payments/
+ │ ├── initiate.php 
+ │ ├── confirm.php 
+ │ ├── history.php 
+### Analytics & Exports
  │ ├── reports/ 
-### For later sprints (analytics & exports) 
  │ ├── generate_pdf.php 
  │ ├── generate_excel.php 
 ### Static files 
