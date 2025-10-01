@@ -2,13 +2,13 @@
 session_start();
 include '../db.php';
 
-// Check if patient is logged in
+
 if (!isset($_SESSION['patient_id'])) {
     header("Location: ../login.php");
     exit();
 }
 
-// Handle form submission
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $patient_id = $_SESSION['patient_id'];
     $doctor_id = $_POST['doctor_id'];
