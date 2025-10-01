@@ -1,9 +1,12 @@
 <?php
 $host = 'localhost';
-$db = 'clinic_system';
+$db = 'clinical_appointment_system'; // no spaces!
 $user = 'root';
 $pass = '';
-$conn = new mysqli($host, $user, $pass, $db);
+$port = 3306;
+
+$conn = new mysqli($host, $user, $pass, $db, $port);
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
